@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Userlist</title>
+  <link rel="stylesheet" href="style/style.css">
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/handlebars/dist/handlebars.min.js"></script>
+  <script src="node_modules/userinfo.js"></script>
+</head>
+<body>
+  <script type="text/template" id="userInfo">
+    <div class="users">
+    <h2>Owner</h2>
+      <ul>
+      {{#each Owner}}
+        <li class="{{role}}">{{username}}</li>
+      {{/each}}
+      </ul>
+    <h2>Admins</h2>
+      <ul>
+      {{#each Admins}}
+        <li class="{{role}}">{{username}}</li>
+      {{/each}}
+      </ul>
+    <h2>Moderators</h2>
+      <ul>
+      {{#each Mods}}
+        <li class="{{role}}">{{username}}</li>
+      {{/each}}
+      </ul>
+    <h2>Users</h2>
+      <ul>
+      {{#each Users}}
+        <li class="{{role}}">{{username}}</li>
+      {{/each}}
+      </ul>
+    </div>
+  </script>
+	<div class="container">
+    <div class="userlist"></div>
+  </div>
+</body>
+</html>
